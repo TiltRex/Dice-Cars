@@ -1,0 +1,122 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    height: 100vh;
+    background: linear-gradient(#6B6B6B, #464646);
+  }
+  
+  .container {
+    width: 600px;
+    height: 600px;
+    padding: 50px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    background-color: #ffffff;
+    box-shadow: 0 15px 25px rgba(50, 50, 50, 0.15);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Montserrat", sans-serif;
+  }
+
+  .franja_izq {
+    height: 100vh;
+    width: 45vh;
+    object-fit: cover;
+  }
+  
+  .franja_der {
+    height: 100vh;
+    width: 45vh;
+    object-fit: cover;
+    position: absolute;
+    right: 0;
+  }
+  
+  .dado_container {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 50px;
+  }
+  
+  p {
+    font-size: 40px;
+    margin: 30px 0;
+    font-weight: 500;
+  }
+  
+  button {
+    background-color: #cf4c4c;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    padding: 15px 0;
+    width: 150px;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 40px;
+  }
+  
+  /* Define la animación */
+  @keyframes shake {
+    0% {
+      transform: rotate(8deg);
+    }
+    50% {
+      transform: rotate(-8deg);
+    }
+    100% {
+      transform: rotate(8deg);
+    }
+  }
+  
+  .dado_container.shake {
+    animation: shake 0.5s infinite;
+  }
+
+  @media (max-width: 500px) {
+
+    body {
+        height: 123vh;
+      }
+      
+    .container {
+        width: 280px;
+        height: 540px;
+      }
+
+
+    .franja_izq {
+        height: 123vh;
+        width: 6vh;
+      }
+      
+    .franja_der {
+        height: 123vh;
+        width: 6vh;
+      }
+
+    .dado_container {
+        width: 80%;
+        flex-direction: column;
+      }
+    
+    p {
+        font-size: 20px;
+        margin: 30px 0;
+        font-weight: 500;
+      }
+
+    button {
+        margin-bottom: 0px;
+      }
+  }
