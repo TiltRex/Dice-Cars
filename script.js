@@ -78,15 +78,15 @@ function roll() {
       let mover = velocidad + dadoUbicacion[indice1] + dadoTiempo[indice3];
       let apro = Math.round(velocidad);
       if (velocidad === Infinity || velocidad === -Infinity) {
-        ecuacion = "V = " + "(" + dadoUbicacion[indice1] + " - " + dadoUbicacion[indice2] + ") / (" + dadoTiempo[indice3] + " - " + dadoTiempo[indice4] + ") = " + velocidad;
+        ecuacion = "V = " + "(" + dadoUbicacion[indice1] + " - " + dadoUbicacion[indice2] + ") / (" + dadoTiempo[indice3] + " - " + dadoTiempo[indice4] + ") = 0";
         let mov = dadoUbicacion[indice1]  + dadoTiempo[indice3];
         mensaje = "Avanza " + mov + " casillas.";
       } else if (apro < 0) {
         ecuacion = "V = " + "(" + dadoUbicacion[indice1] + " - " + dadoUbicacion[indice2] + ") / (" + dadoTiempo[indice3] + " - " + dadoTiempo[indice4] + ") = " + velocidad;
-        let mov2 = dadoUbicacion[indice1] + dadoTiempo[indice3] + Math.abs(velocidad);
+        let mov2 = dadoUbicacion[indice1] + dadoTiempo[indice3] - Math.abs(velocidad);
         mov2 = Math.abs(mov2);
         mov2 = Math.round(mov2);
-        mensaje = "Retrocede " +  mov2 + " casillas." + "\n" + "Tu velocidad fue de: " + apro;
+        mensaje = "Avanza " +  mov2 + " casillas." + "\n" + "Tu velocidad fue de: " + apro;
       } else if (apro > 0) {
         ecuacion = "V = " + "(" + dadoUbicacion[indice1] + " - " + dadoUbicacion[indice2] + ") / (" + dadoTiempo[indice3] + " - " + dadoTiempo[indice4] + ") = " + velocidad;
         mover = Math.abs(mover);
@@ -94,7 +94,7 @@ function roll() {
         mensaje = "Avanza " +  mover + " casillas." + "\n" + "Tu velocidad fue de: " + apro;
       } else {
         ecuacion = "V = " + "(" + dadoUbicacion[indice1] + " - " + dadoUbicacion[indice2] + ") / (" + dadoTiempo[indice3] + " - " + dadoTiempo[indice4] + ") = " + velocidad;
-        mensaje = "Quédate quieto tu velocidad fue de: " + apro;
+        mensaje = "Quédate quieto tu velocidad fue de: 0";
       }
 
     }
