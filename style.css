@@ -11,7 +11,7 @@
   
   .container {
     width: 600px;
-    height: 600px;
+    height: 1200px;
     padding: 50px;
     position: absolute;
     transform: translate(-50%, -50%);
@@ -47,12 +47,19 @@
     margin-bottom: 50px;
   }
   
-  p {
+  .mensaje1{
     font-size: 40px;
     margin: 30px 0;
     font-weight: 500;
   }
+
+  .mensaje2{
+    font-size: 20px;
+    margin: 15px 0;
+    font-weight: 500;
+  }
   
+
   button {
     background-color: #cf4c4c;
     border: none;
@@ -64,6 +71,11 @@
     border-radius: 5px;
     cursor: pointer;
     margin-bottom: 40px;
+  }
+
+  .linea{
+    width: 100%;
+    border: solid black 1px;
   }
   
   /* Define la animación */
@@ -90,8 +102,9 @@
       }
       
     .container {
+        top: 60%;
         width: 280px;
-        height: 540px;
+        height: 980px;
       }
 
 
@@ -108,15 +121,22 @@
     .dado_container {
         width: 80%;
         flex-direction: column;
+        margin-bottom: 30px;
       }
     
-    p {
-        font-size: 20px;
+    button {
+        margin-bottom: 0px;
+      }
+
+      .mensaje1{
+        font-size: 18px;
         margin: 30px 0;
         font-weight: 500;
       }
-
-    button {
-        margin-bottom: 0px;
+    
+      .mensaje2{
+        font-size: 15px;
+        margin: 10px 0;
+        font-weight: 500;
       }
   }
